@@ -9,7 +9,7 @@ try:
     from colorama import Fore, init
     from fake_useragent import UserAgent
 except Exception:
-    print("\n  [𝐒𝐘𝐒𝐓𝐄𝐌] ~ [♥] 𝐆𝐨𝐫𝐮𝐧𝐮𝐬𝐞 𝐆𝐨𝐫𝐞 𝐌𝐨𝐝𝐮𝐥𝐥𝐞𝐫𝐢𝐧𝐢𝐳 𝐄𝐤𝐬𝐢𝐤. 𝐀𝐜𝐚𝐛𝐚 𝐇𝐚𝐧𝐠𝐢𝐬𝐢, 𝐒𝐨𝐲𝐥𝐞𝐦𝐞𝐦. :)")
+    print("\n  [SYSTEM] ~ Modülleriniz Eksik, Fakat Hangisi? Söylemem. :)")
     time.sleep(2)
 
 root = tkinter.Tk()
@@ -39,11 +39,11 @@ hesap = 0
 retry = 0
 
 print()
-Thread = int(input(' ~ [?] {𝗠𝗮𝘅 𝟰𝟬𝟬 𝗕𝗼𝘁} 𝗕𝗼𝘁 𝗛𝗶𝘇𝗶: '))
+Thread = int(input(' ~ [?] {Max 400} Bot Hizi: '))
 
 if Thread > 400:
     print(Fore.RED)
-    print(" ~ [!] 𝗠𝗮𝘅 𝗧𝗵𝗿𝗲𝗮𝗱 𝟰𝟬𝟬'𝗱𝘂𝗿!")
+    print(" ~ [!] Max Thread 400'dür! ")
     time.sleep(2)
     exit()
 else:
@@ -57,11 +57,11 @@ def menu_design():
     global retry
     print(Fore.CYAN)
     print(banner)
-    print(Fore.CYAN + '                        𝗖𝗵𝗲𝗰𝗸𝗲𝗱:         ' + str(hesap + invalid))
-    print(Fore.CYAN + '                        𝐈𝐧𝐯𝐚𝐥𝐢𝐝:          ' + str(invalid))
-    print(Fore.CYAN + '                        𝐇𝐢𝐭𝐬:            ' + str(hesap))
-    print(Fore.CYAN + '                        𝐑𝐞𝐭𝐫𝐲:           ' + str(retry))
-    print(Fore.CYAN + '                        𝐂𝐏𝐌:            ' + str(num*60))
+    print(Fore.CYAN + '                        Checked:         ' + str(hesap + invalid))
+    print(Fore.CYAN + '                        Invalid:          ' + str(invalid))
+    print(Fore.CYAN + '                        Hits:            ' + str(hesap))
+    print(Fore.CYAN + '                        Retry:           ' + str(retry))
+    print(Fore.CYAN + '                        CPM:            ' + str(num*60))
     print()
     time.sleep(3)
     threading.Thread(target=menu_design, args=(), ).start()
@@ -70,7 +70,7 @@ try:
     klasor = os.makedirs('kaufland_Hitleri')
 except FileExistsError:
     print(Fore.LIGHTBLUE_EX)
-    print(" ~ [♥] 𝐃𝐚𝐡𝐚 𝐨𝐧𝐜𝐞𝐤𝐢 𝐇𝐢𝐭 𝐤𝐥𝐚𝐬𝐨𝐫𝐮𝐧𝐮𝐳𝐮 𝐬𝐢𝐥𝐢𝐩 𝐭𝐞𝐤𝐫𝐚𝐫 𝐝𝐞𝐧𝐞𝐲𝐢𝐧𝐢𝐳.")
+    print(" ~ Daha Öncek Hit'i Silip Tekrar Deneyin!")
     time.sleep(2)
     exit()
 
@@ -78,10 +78,10 @@ class load_combos:
     global email, password, num, invalid, hesap, retry
 
     print('\n')
-    print(f" {Fore.LIGHTCYAN_EX} ~ [?] 𝐂𝐨𝐦𝐛𝐨𝐥𝐢𝐬𝐭'𝐢 𝐒𝐞𝐜𝐦𝐞𝐤 𝐢𝐜𝐢𝐧 𝐄𝐍𝐓𝐄𝐑'𝐞 𝐁𝐚𝐬..")
+    print(f" {Fore.LIGHTCYAN_EX} ~ [?] Combolist'i Seçmek İçin ENTER'e Bas")
     input()
 
-    fileNameCombo = filedialog.askopenfile(parent=root, mode='rb', title='𝐂𝐨𝐦𝐛𝐨𝐥𝐢𝐬𝐭 𝐃𝐨𝐬𝐲𝐚𝐬𝐢𝐧𝐢 𝐒𝐞𝐜!',
+    fileNameCombo = filedialog.askopenfile(parent=root, mode='rb', title='Combolist Dosyasini Sec!',
                                        filetype=(("txt", "*.txt"), ("All files", "*.txt")))
     if fileNameCombo is None:
         print()
